@@ -1,0 +1,24 @@
+[tool.pdm]
+# PEP 621 project metadata
+# See https://www.python.org/dev/peps/pep-0621/
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[project]
+name = "currency_calculator"
+version = "0.1.0"
+readme = "README.md"
+requires-python = ">=3.6"
+description = "A currency calculator that retrieves exchange rates from the NBP API."
+dependencies = [
+    "requests"
+]
+
+[tool.pdm.build]
+packages = ["currency_calculator"]
+editable-backend = "path"
+
+[project.scripts]
+currency = "currency_calculator.__main__:main"
