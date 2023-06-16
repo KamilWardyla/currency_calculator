@@ -15,7 +15,10 @@ description = "A currency calculator that retrieves exchange rates from the NBP 
 dependencies = [
     "requests"
 ]
-
+[project.optional-dependencies]
+test = [
+    "pytest"
+]
 [tool.pdm.build]
 packages = ["currency_calculator"]
 editable-backend = "path"
